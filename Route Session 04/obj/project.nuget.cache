@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "QIrJSmaaZCCM0wyiMk4YER59qlyEatqahTUrhTe5x2L7E3RpTgf9dZMqTObstK8e7o5Gz+j3CBafJ2JdBYIPcw==",
+  "success": true,
+  "projectFilePath": "G:\\Route C#\\Route Session 04\\Route Session 04.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ELTANANY 01062856027\\.nuget\\packages\\microsoft.dotnet.ilcompiler\\8.0.2\\microsoft.dotnet.ilcompiler.8.0.2.nupkg.sha512",
+    "C:\\Users\\ELTANANY 01062856027\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.2\\microsoft.net.illink.tasks.8.0.2.nupkg.sha512",
+    "C:\\Users\\ELTANANY 01062856027\\.nuget\\packages\\runtime.win-x64.microsoft.dotnet.ilcompiler\\8.0.2\\runtime.win-x64.microsoft.dotnet.ilcompiler.8.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

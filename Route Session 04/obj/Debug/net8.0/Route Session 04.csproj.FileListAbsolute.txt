@@ -1,0 +1,14 @@
+G:\Route C#\Route Session 04\bin\Debug\net8.0\Route Session 04.exe
+G:\Route C#\Route Session 04\bin\Debug\net8.0\Route Session 04.deps.json
+G:\Route C#\Route Session 04\bin\Debug\net8.0\Route Session 04.runtimeconfig.json
+G:\Route C#\Route Session 04\bin\Debug\net8.0\Route Session 04.dll
+G:\Route C#\Route Session 04\bin\Debug\net8.0\Route Session 04.pdb
+G:\Route C#\Route Session 04\obj\Debug\net8.0\Route Session 04.GeneratedMSBuildEditorConfig.editorconfig
+G:\Route C#\Route Session 04\obj\Debug\net8.0\Route Session 04.AssemblyInfoInputs.cache
+G:\Route C#\Route Session 04\obj\Debug\net8.0\Route Session 04.AssemblyInfo.cs
+G:\Route C#\Route Session 04\obj\Debug\net8.0\Route Session 04.csproj.CoreCompileInputs.cache
+G:\Route C#\Route Session 04\obj\Debug\net8.0\Route Session 04.dll
+G:\Route C#\Route Session 04\obj\Debug\net8.0\refint\Route Session 04.dll
+G:\Route C#\Route Session 04\obj\Debug\net8.0\Route Session 04.pdb
+G:\Route C#\Route Session 04\obj\Debug\net8.0\Route Session 04.genruntimeconfig.cache
+G:\Route C#\Route Session 04\obj\Debug\net8.0\ref\Route Session 04.dll
