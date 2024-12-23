@@ -361,7 +361,405 @@ namespace Route_Session_04
             #endregion
 
 
+        #region Assignmet Session 04
 
+ 
+            // Call functions to test solutions
+            Question1();
+            Question2();
+            Question3();
+            Question4();
+            Question5();
+            Question6();
+            Question7();
+            Question8();
+            Question9();
+            Question10();
+            Question11();
+            Question12();
+            Question13();
+            Question14();
+            Question15();
+            Question16();
+            Question17();
+            Question18();
+            Question19();
+        }
+
+        #region Question1_PrintNumbersToN
+        static void Question1()
+        {
+            Console.WriteLine("Enter an integer:");
+            int n = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= n; i++)
+            {
+                Console.Write(i + (i < n ? ", " : "\n"));
+            }
+        }
+        #endregion
+
+        #region Question2_MultiplicationTable
+        static void Question2()
+        {
+            Console.WriteLine("Enter an integer:");
+            int n = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= 12; i++)
+            {
+                Console.Write(n * i + (i < 12 ? " " : "\n"));
+            }
+        }
+        #endregion
+
+        #region Question3_PrintEvenNumbersToN
+        static void Question3()
+        {
+            Console.WriteLine("Enter an integer:");
+            int n = int.Parse(Console.ReadLine());
+            for (int i = 2; i <= n; i += 2)
+            {
+                Console.Write(i + (i + 2 <= n ? " " : "\n"));
+            }
+        }
+        #endregion
+
+        #region Question4_PowerCalculation
+        static void Question4()
+        {
+            Console.WriteLine("Enter base and exponent (separated by space):");
+            string[] input = Console.ReadLine().Split(' ');
+            int baseNum = int.Parse(input[0]);
+            int exponent = int.Parse(input[1]);
+            int result = 1;
+
+            for (int i = 0; i < exponent; i++)
+            {
+                result *= baseNum;
+            }
+
+            Console.WriteLine($"{baseNum}^{exponent} = {result}");
+        }
+        #endregion
+
+        #region Question5_ReverseString
+        static void Question5()
+        {
+            Console.WriteLine("Enter a string:");
+            string input = Console.ReadLine();
+            char[] charArray = input.ToCharArray();
+            Array.Reverse(charArray);
+            Console.WriteLine(new string(charArray));
+        }
+        #endregion
+
+        #region Question6_PrimeNumbersInRange
+        static void Question6()
+        {
+            Console.WriteLine("Input starting number of range:");
+            int start = int.Parse(Console.ReadLine());
+            Console.WriteLine("Input ending number of range:");
+            int end = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("The prime numbers between {0} and {1} are:", start, end);
+            for (int num = start; num <= end; num++)
+            {
+                if (IsPrime(num))
+                    Console.Write(num + " ");
+            }
+            Console.WriteLine();
+        }
+
+        static bool IsPrime(int number)
+        {
+            if (number <= 1) return false;
+            for (int i = 2; i <= Math.Sqrt(number); i++)
+            {
+                if (number % i == 0)
+                    return false;
+            }
+            return true;
+        }
+        #endregion
+
+        #region Question7_DecimalToBinary
+        static void Question7()
+        {
+            Console.WriteLine("Enter a number to convert:");
+            int number = int.Parse(Console.ReadLine());
+            string binary = "";
+
+            while (number > 0)
+            {
+                binary = (number % 2) + binary;
+                number /= 2;
+            }
+
+            Console.WriteLine("The Binary of the number is: " + binary);
+        }
+        #endregion
+
+        #region Question8_IdentityMatrix
+        static void Question8()
+        {
+            Console.WriteLine("Enter the size of the identity matrix:");
+            int n = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    Console.Write(i == j ? "1 " : "0 ");
+                }
+                Console.WriteLine();
+            }
+        }
+        #endregion
+
+        #region Question9_Substring
+        static void Question9()
+        {
+            Console.WriteLine("Enter a string:");
+            string input = Console.ReadLine();
+            Console.WriteLine("Enter starting index and length of substring (separated by space):");
+            string[] parts = Console.ReadLine().Split(' ');
+            int start = int.Parse(parts[0]);
+            int length = int.Parse(parts[1]);
+
+            Console.WriteLine("Substring: " + input.Substring(start, length));
+        }
+        #endregion
+
+        #region Question10_ConcatenateStrings
+        static void Question10()
+        {
+            Console.WriteLine("Enter first string:");
+            string str1 = Console.ReadLine();
+            Console.WriteLine("Enter second string:");
+            string str2 = Console.ReadLine();
+
+            Console.WriteLine("Concatenated string: " + str1 + str2);
+        }
+        #endregion
+
+        #region Question11_IdentityMatrix
+        static void Question11()
+        {
+            Question8();
+        }
+        #endregion
+
+        #region Question12_ArraySum
+        static void Question12()
+        {
+            Console.WriteLine("Enter the size of the array:");
+            int n = int.Parse(Console.ReadLine());
+            int[] arr = new int[n];
+            int sum = 0;
+
+            Console.WriteLine("Enter the elements of the array:");
+            for (int i = 0; i < n; i++)
+            {
+                arr[i] = int.Parse(Console.ReadLine());
+                sum += arr[i];
+            }
+
+            Console.WriteLine("Sum of all elements: " + sum);
+        }
+        #endregion
+
+        #region Question13_MergeSortedArrays
+        static void Question13()
+        {
+            Console.WriteLine("Enter the size of the arrays:");
+            int n = int.Parse(Console.ReadLine());
+
+            int[] arr1 = new int[n];
+            int[] arr2 = new int[n];
+
+            Console.WriteLine("Enter the elements of the first array in sorted order:");
+            for (int i = 0; i < n; i++)
+                arr1[i] = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter the elements of the second array in sorted order:");
+            for (int i = 0; i < n; i++)
+                arr2[i] = int.Parse(Console.ReadLine());
+
+            int[] merged = new int[2 * n];
+            Array.Copy(arr1, merged, n);
+            Array.Copy(arr2, 0, merged, n, n);
+            Array.Sort(merged);
+
+            Console.WriteLine("Merged and sorted array: " + string.Join(" ", merged));
+        }
+        #endregion
+
+        #region Question14_ArrayFrequency
+        static void Question14()
+        {
+            Console.WriteLine("Enter the size of the array:");
+            int n = int.Parse(Console.ReadLine());
+            int[] arr = new int[n];
+
+            Console.WriteLine("Enter the elements of the array:");
+            for (int i = 0; i < n; i++)
+                arr[i] = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Frequency of elements:");
+            Array.Sort(arr);
+            int count = 1;
+            for (int i = 1; i <= n; i++)
+            {
+                if (i == n || arr[i] != arr[i - 1])
+                {
+                    Console.WriteLine(arr[i - 1] + ": " + count);
+                    count = 1;
+                }
+                else
+                {
+                    count++;
+                }
+            }
+        }
+    #endregion
+
+        #region Question15_MaxMinInArray
+    static void Question15()
+    {
+        Console.WriteLine("Enter the size of the array:");
+        int n = int.Parse(Console.ReadLine());
+        int[] arr = new int[n];
+
+        Console.WriteLine("Enter the elements of the array:");
+        for (int i = 0; i < n; i++)
+        {
+            arr[i] = int.Parse(Console.ReadLine());
+        }
+
+        int max = arr[0], min = arr[0];
+        for (int i = 1; i < n; i++)
+        {
+            if (arr[i] > max) max = arr[i];
+            if (arr[i] < min) min = arr[i];
+        }
+
+        Console.WriteLine($"Maximum element: {max}");
+        Console.WriteLine($"Minimum element: {min}");
+    }
+    #endregion
+
+        #region Question16_SecondLargestInArray
+    static void Question16()
+    {
+        Console.WriteLine("Enter the size of the array:");
+        int n = int.Parse(Console.ReadLine());
+        int[] arr = new int[n];
+
+        Console.WriteLine("Enter the elements of the array:");
+        for (int i = 0; i < n; i++)
+        {
+            arr[i] = int.Parse(Console.ReadLine());
+        }
+
+        Array.Sort(arr);
+        int secondLargest = arr[n - 2];
+
+        Console.WriteLine($"Second largest element: {secondLargest}");
+    }
+    #endregion
+
+        #region Question17_LongestDistanceBetweenEqualCells
+    static void Question17()
+    {
+        Console.WriteLine("Enter the size of the array:");
+        int n = int.Parse(Console.ReadLine());
+        int[] arr = new int[n];
+
+        Console.WriteLine("Enter the elements of the array:");
+        for (int i = 0; i < n; i++)
+        {
+            arr[i] = int.Parse(Console.ReadLine());
+        }
+
+        int maxDistance = 0;
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = n - 1; j > i; j--)
+            {
+                if (arr[i] == arr[j])
+                {
+                    maxDistance = Math.Max(maxDistance, j - i);
+                }
+            }
+        }
+
+        Console.WriteLine($"Longest distance between two equal cells: {maxDistance}");
+    }
+    #endregion
+
+        #region Question18_CopyMultidimensionalArray
+    static void Question18()
+    {
+        Console.WriteLine("Enter the dimensions of the array (rows and columns):");
+        int rows = int.Parse(Console.ReadLine());
+        int cols = int.Parse(Console.ReadLine());
+
+        int[,] firstArray = new int[rows, cols];
+        int[,] secondArray = new int[rows, cols];
+
+        Console.WriteLine("Enter the elements of the first array:");
+        for (int i = 0; i < rows; i++)
+        {
+            for (int j = 0; j < cols; j++)
+            {
+                firstArray[i, j] = int.Parse(Console.ReadLine());
+            }
+        }
+
+        for (int i = 0; i < rows; i++)
+        {
+            for (int j = 0; j < cols; j++)
+            {
+                secondArray[i, j] = firstArray[i, j];
+            }
+        }
+
+        Console.WriteLine("Elements of the second array:");
+        for (int i = 0; i < rows; i++)
+        {
+            for (int j = 0; j < cols; j++)
+            {
+                Console.Write(secondArray[i, j] + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+    #endregion
+     
+        #region Question19_ReverseArray
+    static void Question19()
+    {
+        Console.WriteLine("Enter the size of the array:");
+        int n = int.Parse(Console.ReadLine());
+        int[] arr = new int[n];
+
+        Console.WriteLine("Enter the elements of the array:");
+        for (int i = 0; i < n; i++)
+        {
+            arr[i] = int.Parse(Console.ReadLine());
+        }
+
+        Console.WriteLine("Array in reverse order:");
+        for (int i = n - 1; i >= 0; i--)
+        {
+            Console.Write(arr[i] + " ");
+        }
+        Console.WriteLine();
+    }
+    #endregion
+}
+
+
+
+#endregion
 
         }
     }
